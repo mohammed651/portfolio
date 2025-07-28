@@ -291,7 +291,7 @@ export default function Navbar() {
                   className="mt-auto mb-8 text-center"
                 >
                   <div className="w-16 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-4" />
-                  <p className="text-sm text-gray-500 dark:text-gray-400">© 2024 Protoflow</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">© 2025 Mohammed Ahmed</p>
                 </motion.div>
               </div>
             </motion.div>

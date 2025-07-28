@@ -390,55 +390,55 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
-            <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20 dark:border-gray-700/20">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Let's Connect</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-                I'm always excited to work on new projects and collaborate with amazing people. Whether you have a
-                project in mind or just want to chat about technology, feel free to reach out!
-              </p>
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start max-w-full overflow-x-hidden px-2 sm:px-0">
+  {/* Contact Information */}
+  <motion.div
+    initial={{ opacity: 0, x: -50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+    className="space-y-6 w-full"
+  >
+    <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-4 sm:p-8 shadow-xl border border-white/20 dark:border-gray-700/20 w-full max-w-full overflow-hidden">
+      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Let's Connect</h3>
+      <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
+        I'm always excited to work on new projects and collaborate with amazing people.
+      </p>
 
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <motion.a
-                    key={info.title}
-                    href={info.href}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.02, x: 10 }}
-                    className="flex items-center space-x-4 p-4 bg-white/80 dark:bg-gray-700/50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group backdrop-blur-sm border border-white/30 dark:border-gray-600/30"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <info.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">{info.title}</h4>
-                      <p className="text-gray-600 dark:text-gray-400">{info.value}</p>
-                    </div>
-                  </motion.a>
-                ))}
-              </div>
+      <div className="space-y-4 sm:space-y-6">
+        {contactInfo.map((info, index) => (
+          <motion.a
+            key={info.title}
+            href={info.href}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02, x: 5 }}
+            className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-white/80 dark:bg-gray-700/50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group backdrop-blur-sm border border-white/30 dark:border-gray-600/30 w-full max-w-full"
+          >
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <info.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
             </div>
-          </motion.div>
+            <div className="overflow-hidden">
+              <h4 className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">{info.title}</h4>
+              <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm truncate">{info.value}</p>
+            </div>
+          </motion.a>
+        ))}
+      </div>
+    </div>
+  </motion.div>
 
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-white/20 dark:border-gray-700/20">
+  {/* Contact Form */}
+  <motion.div
+    initial={{ opacity: 0, x: 50 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+    className="w-full max-w-full"
+  >
+    <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl shadow-2xl p-4 sm:p-8 border border-white/20 dark:border-gray-700/20 w-full max-w-full overflow-hidden">
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Send me a message</h3>
                 <p className="text-gray-600 dark:text-gray-400">I'll get back to you within 24 hours</p>
