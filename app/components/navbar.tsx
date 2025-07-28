@@ -78,6 +78,7 @@ export default function Navbar() {
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.6, delay: 0.1 }}
   whileHover={{ scale: 1.05 }}
+   aria-label="Go to home section"
   className="flex items-center space-x-2 cursor-pointer whitespace-nowrap"
   onClick={() => scrollToSection("#home")}
 >
@@ -138,6 +139,7 @@ export default function Navbar() {
                 transition={{ duration: 0.6, delay: 0.7 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
+                 aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="relative w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300 hover:shadow-lg"
               >
@@ -175,6 +177,7 @@ export default function Navbar() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="relative w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center transition-all duration-300"
               >
@@ -209,6 +212,7 @@ export default function Navbar() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label={isOpen ? "Close menu" : "Open menu"}
                 onClick={() => setIsOpen(!isOpen)}
                 className="relative z-50 p-2"
               >
