@@ -78,7 +78,7 @@ export default function Navbar() {
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.6, delay: 0.1 }}
   whileHover={{ scale: 1.05 }}
-  className="flex items-center space-x-2 cursor-pointer"
+  className="flex items-center space-x-2 cursor-pointer whitespace-nowrap"
   onClick={() => scrollToSection("#home")}
 >
   <svg
@@ -97,7 +97,7 @@ export default function Navbar() {
       strokeLinejoin="round"
     />
   </svg>
-  <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+  <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
     Mohammed Ahmed
   </span>
 </motion.div>

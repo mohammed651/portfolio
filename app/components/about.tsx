@@ -89,8 +89,8 @@ export default function About() {
     document.body.removeChild(link)
   }
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="about" className="py-20 bg-gray-50 dark:bg-gray-800/50 overflow-x-hidden">
+  <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -106,16 +106,16 @@ export default function About() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12 items-stretch">
+         <div className="grid lg:grid-cols-5 gap-8 sm:gap-12 items-stretch px-2 sm:px-0">
           {/* Profile Image - Takes up more space on desktop */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="lg:col-span-2 flex items-center justify-center"
+            className="lg:col-span-2 flex items-center justify-center w-full"
           >
-            <div className="relative w-full max-w-md lg:max-w-none">
+            <div className="relative w-full max-w-md mx-auto">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 className="relative w-full aspect-[4/5] lg:aspect-[3/4] xl:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl"
@@ -167,7 +167,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="lg:col-span-3 flex flex-col justify-center space-y-8"
+           className="lg:col-span-3 flex flex-col justify-center space-y-8 w-full"
           >
             <div className="space-y-6">
               <div>
@@ -228,7 +228,7 @@ export default function About() {
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
   viewport={{ once: true }}
-  className="mt-20"
+  className="mt-20 px-2 sm:px-0"
 >
   <h3 className="text-3xl font-bold text-center mb-12">
     <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
@@ -236,7 +236,7 @@ export default function About() {
     </span>
   </h3>
 
-  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
     {skillGroups.map((group, groupIndex) => (
       <motion.div
         key={group.title}
@@ -245,7 +245,7 @@ export default function About() {
         transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
         viewport={{ once: true }}
         whileHover={{ y: -5 }}
-        className="relative overflow-hidden group"
+        className="relative overflow-hidden group skill-item"
       >
         {/* Gradient Background */}
         <div className={`absolute inset-0 bg-gradient-to-br ${group.color} opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-xl`} />

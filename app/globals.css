@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+* {
+  box-sizing: border-box;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -86,6 +88,11 @@
 }
 
 /* Smooth scrolling */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -127,4 +134,20 @@ html {
   .floating-input, .floating-textarea {
     padding-left: 2.5rem !important;
   }
+  .mobile-menu-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.skill-item {
+  min-width: 0;
+}
+
+.skill-icon {
+  flex-shrink: 0;
+}
+
+section.about-section {
+  max-width: 100%;
+  overflow-x: hidden;
 }
