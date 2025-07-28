@@ -121,7 +121,7 @@ export default function About() {
                 className="relative w-full aspect-[4/5] lg:aspect-[3/4] xl:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl"
               >
                 <Image
-                  src="/MOHAMED.png"
+                  src="/MOHAMED.webp"
                   alt="Mohammed Ahmed - Profile Photo"
                   fill
                   className="object-cover"
