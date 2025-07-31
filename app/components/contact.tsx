@@ -8,6 +8,8 @@ import { Mail, Phone, MapPin, Send, Loader2, User, MessageSquare, CheckCircle, A
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { event } from "@/lib/gtag";
+
 
 interface FormData {
   name: string
@@ -321,6 +323,11 @@ export default function Contact() {
     showToast("error", "Please fix the errors below");
     return;
   }
+   event({
+    action: "send_message",
+    category: "contact",
+    label: "Contact Form Submission",
+  });
 
   setIsSubmitting(true);
 

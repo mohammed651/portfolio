@@ -16,6 +16,7 @@ import {
   SiGitlab, SiDocker, SiAmazon, SiHeroku, SiNetlify 
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
+import { event } from "@/lib/gtag";
 
 const skillGroups = [
   {
@@ -80,6 +81,11 @@ const highlights = [
 
 export default function About() {
    const handleDownloadCV = () => {
+    event({
+    action: "download_cv",
+    category: "engagement",
+    label: "Download CV Button",
+  });
     // إنشاء رابط تنزيل لملف الـ CV
     const link = document.createElement('a')
     link.href = '/Mohammed-Ahmed-CV.pdf' // تأكد من أن اسم الملف مطابق للملف في مجلد public
