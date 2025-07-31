@@ -1,24 +1,26 @@
-'use client';
+'use client'
 
-import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
-import * as gtag from '@/lib/gtag';
+import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
+import * as gtag from '@/lib/gtag'
+import Script from 'next/script'
 
 const GoogleAnalytics = () => {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   useEffect(() => {
-    gtag.pageview(pathname);
-  }, [pathname]);
+    gtag.pageview(pathname)
+  }, [pathname])
 
   return (
     <>
-      <script
-        async
+      <Script
+        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
-      <script
+      <Script
         id="gtag-init"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
@@ -31,7 +33,7 @@ const GoogleAnalytics = () => {
         }}
       />
     </>
-  );
-};
+  )
+}
 
-export default GoogleAnalytics;
+export default GoogleAnalytics
